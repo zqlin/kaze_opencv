@@ -223,4 +223,15 @@ namespace cv
         (*this)(image, Mat(), keypoints, descriptors, false);
     }
 
+    CV_INIT_ALGORITHM(KAZE, "Feature2D.KAZE",
+                      obj.info()->addParam(obj, "nfeatures", obj.options.nfeatures);
+                      obj.info()->addParam(obj, "noctaves", obj.options.omax);
+                      obj.info()->addParam(obj, "nlevels", obj.options.nsublevels);
+                      obj.info()->addParam(obj, "detectorThreshold", obj.options.dthreshold);
+                      obj.info()->addParam(obj, "diffusivityType", obj.options.diffusivity);
+                      obj.info()->addParam(obj, "descriptorMode", obj.options.descriptor);
+                      obj.info()->addParam(obj, "extendDescriptor", obj.options.extended);
+                      obj.info()->addParam(obj, "uprightOrient", obj.options.upright);
+                      obj.info()->addParam(obj, "verbosity", obj.options.verbosity));
+
 }
