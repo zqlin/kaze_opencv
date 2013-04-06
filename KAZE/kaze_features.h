@@ -36,6 +36,8 @@
 
 #include "kaze_config.h"
 
+using std::vector;
+
 /*!
  KAZE features implementation.
  http://www.robesafe.com/personal/pablo.alcantarilla/papers/Alcantarilla12eccv.pdf

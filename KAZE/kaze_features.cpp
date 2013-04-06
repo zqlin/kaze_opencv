@@ -44,6 +44,8 @@
 #define DEGREE_TO_RADIAN(x) ((x) * CV_PI / 180.0)
 #define RADIAN_TO_DEGREE(x) ((x) * 180.0 / CV_PI)
 
+using std::vector;
+
 namespace cv
 {
     /***
@@ -167,7 +169,7 @@ namespace cv
             kazePoints.resize(_keypoints.size());
 
             #pragma omp parallel for
-            for (int i = 0; i < kazePoints.size(); i++)
+            for (size_t i = 0; i < kazePoints.size(); i++)
             {
                 convertPoint(_keypoints[i], kazePoints[i]);    
             }
@@ -193,7 +195,7 @@ namespace cv
             _keypoints.resize(kazePoints.size());
 
             #pragma omp parallel for
-            for (int i = 0; i < kazePoints.size(); i++)
+            for (size_t i = 0; i < kazePoints.size(); i++)
             {
                 convertPoint(kazePoints[i], _keypoints[i]);
             }
