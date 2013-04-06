@@ -318,7 +318,7 @@ int main(int argc, char** argv)
         ////////////////////////////////////////////////////////////////////////////////////
         //-- Draw Keypoints
         char tiImg[20];
-        sprintf_s(tiImg, "Image #%d", k);
+        sprintf(tiImg, "Image #%d", k);
         showText(img_2, tiImg);
         if (doDrawKeypoint)
         {
